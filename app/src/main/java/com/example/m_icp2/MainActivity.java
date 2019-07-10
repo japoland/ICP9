@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 // Write the relevant code for making the buttons work(i.e implement the implicit and explicit intents
 
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
-                "mailto","japolandkc@gmail.com", null));
+                "mailto","email@email.com", null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "You pizza order has been placed");
         emailIntent.putExtra(Intent.EXTRA_TEXT, createOrderSummary(userInputName, hasOnions, hasMushrooms, hasOlives, hasPeppers, totalPrice));
         startActivity(Intent.createChooser(emailIntent, "Send email..."));
